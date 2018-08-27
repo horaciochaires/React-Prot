@@ -25,7 +25,7 @@ export default StyleSheet.create({
     height: '10%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop:"100%"
+    marginTop:"100%",
  },
   textButton: {
     fontSize: 20,
@@ -33,19 +33,26 @@ export default StyleSheet.create({
     textAlign: "center",
     color: "#FFFFFF"
   },
+  
   submit:{
-    marginRight:165,
-    marginLeft:165,
+    marginRight:"37%",
+    marginLeft:"37%",
     marginTop:0,
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop:32,
+    paddingBottom:3,
     backgroundColor:'#113070',
     borderRadius:70,
     // borderWidth: 1,
     // borderColor: '#fff'
   },
   submitText:{
+    width:"70%",
+    height:"70%",
       color:'#fff',
       textAlign:'center',
+      justifyContent: 'center',
+      marginLeft:"15%",
+      marginTop:"15%",
+      paddingTop:"15%"
   }
 });

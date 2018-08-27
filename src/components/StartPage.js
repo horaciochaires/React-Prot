@@ -57,7 +57,7 @@ export default class StartPage extends Component<Props> {
           secureTextEntry={true}
           style={styles.input}
         /> */}
-        
+
         <View style={styles.loginButtonSection}>
           {/* <TouchableOpacity onPress={this.login}> */}
           <TouchableOpacity onPress={() => history.push("/Login")}>
@@ -66,18 +66,26 @@ export default class StartPage extends Component<Props> {
             </View>
           </TouchableOpacity>
         </View>
-        {/* <Button 
-          onPress={() => history.push("/PantallaPrincipal")}
-          title="Sobre Nosotros"
-          color="#113070"
-          accessibilityLabel="Learn more about this purple button"
-        /> */}
-        <TouchableHighlight
-         onPress={() => history.push("/AboutUs")}
-          style={styles.submit}
-          underlayColor='#fff'>
-          <Text style={ styles.submitText}>Sobre Nosotros</Text>
-        </TouchableHighlight>
+        <View style={{
+          flex: 1, flexDirection: 'column', alignItems: 'center',
+        }}>
+          <View style={{
+            width: 70, height: 70,
+            alignItems: 'center'
+          }}>
+            <TouchableHighlight
+              onPress={() => history.push("/AboutUs")}
+              style={{
+                marginLeft: 1,
+                backgroundColor: "#113070",
+                height: 100,
+                width: 100,
+                borderRadius: 50
+              }}>
+              <Text style={styles.submitText}>Sobre Nosotros</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
       </View>
     );
   }

@@ -4,4 +4,8 @@ import Register from "./Register";
 import Login from "./Login";
 import StartPage from "./StartPage";
 import AboutUs from "./AboutUs";
-export { Login, PantallaPrincipal, Register, App, StartPage, AboutUs };
+import recoverPassword from "./recoverPassword";
+import recoverPasswordCode from "./recoverPasswordCode";
+import newPassword from "./newPassword";
+
+export { Login, PantallaPrincipal, Register, App, StartPage, AboutUs, recoverPassword,recoverPasswordCode,newPassword };

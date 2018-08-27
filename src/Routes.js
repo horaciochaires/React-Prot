@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Platform, AsyncStorage } from "react-native";
 import { NativeRouter, Route, AndroidBackButton } from "react-router-native";
-import { Login, PantallaPrincipal, Register, StartPage, AboutUs} from "./containers";
+import { Login, PantallaPrincipal, Register, StartPage, AboutUs,recoverPassword,recoverPasswordCode,newPassword} from "./containers";
 import type { userType } from "./types";
 import { logger } from "./config/validations";
 
@@ -26,7 +26,7 @@ export default ({ user }: Props) => {
       />
       <Route
         path="/PantallaPrincipal"
-        component={user.logged ? PantallaPrincipal : Register}
+        component={PantallaPrincipal}
       />
        <Route
         path="/Register"
@@ -37,6 +37,11 @@ export default ({ user }: Props) => {
         component={Login}
       />
       <Route path="/AboutUs" component={AboutUs} />
+      
+      <Route path="/recoverPassword" component={recoverPassword} />
+      <Route path="/recoverPasswordCode" component={recoverPasswordCode} />
+      <Route path="/newPassword" component={newPassword} />
+   
     </View>
   );
 

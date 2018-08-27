@@ -28,7 +28,7 @@ export default class Register extends Component<Props> {
     
     this.register = this.register.bind(this);
     this.state = {
-      check: true
+      check: false
     };
   }
   checkBoxTest(){
@@ -38,12 +38,13 @@ export default class Register extends Component<Props> {
   }
 
   register() {
-    const { registeruser } = this.props;
+    
 
-    registeruser(this.state.username, this.state.password);
+    
   }
 
   render() {
+    const { history } = this.props;
     return (
       <View style={{ height: "100%", backgroundColor: "#0FBBC7" }}>
         <View style={{ width: "100%", height: 120 }} >
@@ -101,9 +102,10 @@ export default class Register extends Component<Props> {
           underlineColorAndroid="transparent"
           style={styles.input}
         />
-          <View style={{flex: 1, flexDirection: 'row', paddingTop:10}}>
-        <View style={{width: 30, height: 50,marginLeft:50}}>
+          <View style={{flex: 1, flexDirection: 'row', paddingTop:0}}>
+        <View style={{width: 29, height: 29,marginLeft:50}}>
         <CheckBox 
+        
           value={this.state.check}
           onChange={()=>this.checkBoxTest()}
         />
@@ -116,14 +118,14 @@ export default class Register extends Component<Props> {
         </Text>
         </View>
         </View>
-        <TouchableOpacity onPress={this.register}>
+        <TouchableOpacity onPress={() => history.push("/Home")}>
           <View style={styles.button}>
-            <Text style={styles.textButton}>Registrar </Text>
+            <Text style={styles.textButton}>Enviar </Text>
           </View>
         </TouchableOpacity>
         <View style={{ width: "100%", flexDirection: 'row', paddingTop: 45, paddingBottom: 15 }}>
-          <View style={{ marginLeft: 15, width: "100%", height: 20 }}>
-            <Text style={{fontSize:15,color: "#FFFFFF"}}>
+          <View style={{ marginLeft: 19, width: "100%", height: 20 }}>
+            <Text style={{fontSize:14,color: "#FFFFFF"}}>
               AFP POPULAR ©  2018 | Todos los derechos reservados
             </Text>
           </View>

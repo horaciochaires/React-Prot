@@ -35,7 +35,7 @@ export default class AboutUs extends Component<Props> {
           <View style={{ width: "100%", flexDirection: 'row' }}>
             <View style={{ width: "60%", height: 70, backgroundColor: 'powderblue' }} />
             <View style={{ width: "40%", height: 70 }}>
-              <TouchableOpacity onPress={() => history.push("/PantallaPrincipal")}>
+              <TouchableOpacity onPress={() => history.push("/Login")}>
                 <View style={styles.button}>
                   <Text style={styles.textButton}> Acceso</Text>
                 </View>

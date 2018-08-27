@@ -109,21 +109,21 @@ export default class Login extends Component<Props> {
           </View>
           <View style={{ marginRight: 40, width: "55%", height: 20 }} >
             <TouchableHighlight
-              onPress={() => history.push("/")}
+              onPress={() => history.push("/recoverPassword")}
               style={styles.recover}
               underlayColor='#fff'>
               <Text style={styles.recoverText}>Restablece tu contraseña</Text>
             </TouchableHighlight>
           </View>
         </View>
-        <TouchableOpacity onPress={this.register}>
+        <TouchableOpacity onPress={() => history.push("/PantallaPrincipal")}>
           <View style={styles.button}>
-            <Text style={styles.textButton}>Registrar </Text>
+            <Text style={styles.textButton}>Entrar </Text>
           </View>
         </TouchableOpacity>
-        <View style={{ width: "100%", flexDirection: 'row', paddingTop: 45, paddingBottom: 15 }}>
-          <View style={{ marginLeft: 15, width: "100%", height: 20 }}>
-            <Text style={{fontSize:15,color: "#FFFFFF"}}>
+        <View style={{ width: "100%", flexDirection: 'row', paddingTop: 45, paddingBottom: 15,alignItems: 'center'}}>
+          <View style={{alignItems: 'center', width: "100%", height: 20}}>
+            <Text style={{textAlign:'center',fontSize:15,color: "#FFFFFF"}}>
               AFP POPULAR ©  2018 | Todos los derechos reservados
             </Text>
           </View>

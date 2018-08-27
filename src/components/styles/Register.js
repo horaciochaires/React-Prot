@@ -21,7 +21,7 @@ export default StyleSheet.create({
     width: 120,
   borderRadius:50,
   backgroundColor: "#FE8C07",
-  marginLeft:"35%",
+  marginLeft:"10%",
   marginTop:10
 
   
@@ -59,6 +59,5 @@ export default StyleSheet.create({
       textAlign:'right',
       fontSize:16
   }
-  
 
 });
